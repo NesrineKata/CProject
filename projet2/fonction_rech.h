@@ -25,21 +25,16 @@ liste_mat recherche_code_m(liste_mat l,char code_m[])
     }
     return NULL;
 }
-liste_mat  recherche_mat(liste_mat l,char mat[])
+liste_mat  recherche_mat(liste_mat l,char mat[4])
 {
     liste_mat p=l;
     while(p)
     {
         if(strcmp(p->info2.code_mat,mat)==0)
-        {
-            printf("Deja EXISTE");
             return p;
-        }
         p=p->suiv2;
     }
-    printf("N'EXISTE PAS");
     return NULL;
-
 }
 liste_note recherche_cin_mat(liste_note l,char mat[],char code_m[],char nat[])
 {

@@ -21,17 +21,14 @@ int valide(date d)
             else
                 jmax=29;
     }
-    return (jmax>=d.j&&d.m>=1&&d.m<=12&&d.a>=1980&&d.j>=1);
+    return (jmax>=d.j&&d.m>=1&&d.m<=12&&d.a>=1970&&d.j>=1);
 }
 int verif_chaine( char ch[])
 {
-    int i=0;
-    while(!ch[i])
-    {
-        if(ch[i]>'Z'&&ch[i]<'A'&&ch[i]<'a'&&ch[i]>'z')
+    int i;
+    for(i=0;ch[i];i++)
+        if(ch[i]>"Z"||ch[i]<"A"||ch[i]<"a"||ch[i]>"z")
             return 0;
-        i++;
-    }
     return 1;
 }
 int verif_cin(char cin[])
@@ -61,7 +58,7 @@ int verif_code(char code[])
    else
    {
        for(i=0;code[i];i++)
-        if(code[i]>'9'&&code[i]<'0'&&code[i]>'Z'&&code[i]<'A')
+        if(code[i]>'9'||code[i]<'0'||code[i]>'Z'||code[i]<'A')
             return 0;
    }
    return 1;
@@ -71,7 +68,7 @@ int verif_nom_mat( char ch[])
     int i=0;
     while(!ch[i])
     {
-        if(ch[i]>'Z'&&ch[i]<'A'&&ch[i]<'a'&&ch[i]>'z')
+        if(ch[i]>'Z'||ch[i]<'A'||ch[i]<'a'||ch[i]>'z')
             return 0;
         i++;
     }
@@ -80,6 +77,12 @@ int verif_nom_mat( char ch[])
 int verif_note(float c)
 {
     if(c>20||c<0)
+        return 0;
+    return 1;
+}
+int verif_coef(float c)
+{
+    if(c<=0)
         return 0;
     return 1;
 }

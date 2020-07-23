@@ -9,10 +9,10 @@ typedef struct
 typedef struct
     {
         char cin[9];
-        char nom[30];
-        char prenom[30];
+        char nom[21];
+        char prenom[21];
         date dn;
-        char section[20];
+        char section[21];
         int etape;
     }etudiant;
 struct cellule1
@@ -24,8 +24,8 @@ typedef struct cellule1 * liste_etud;
 typedef struct
     {
         char code_mat[4];
-        char nom_mat[30];
-        char section[20];
+        char nom_mat[50];
+        char section[21];
         float coef;
         int niveau;
     }matiere;
@@ -48,6 +48,5 @@ struct cellule3
         struct cellule3 * suiv3;
     };
 typedef struct cellule3 * liste_note;
-
 
 #endif // DEFINITION_H_INCLUDED

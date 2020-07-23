@@ -1,0 +1,4 @@
+MyPicture BITMAP "image.bmp"
+ajout_etudiant BITMAP "ajout_etudiant.bmp"
+creation_etudiant BITMAP "creation_etudiant.bmp"
+creation_matiere BITMAP "creation_matiere.bmp"

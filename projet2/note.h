@@ -7,10 +7,10 @@
 #include"controle.h"
 note saisie_note(liste_note l)
 {
-    liste_etud l1/*=recuperation_etudiant(l1)*/;
-    liste_mat l2/*=recuperation_matiere(l2)*/;
+    liste_etud l1;
+    liste_mat l2;
     note n;
-    /*
+
     do
     {
         printf("saisir CIN: ");fflush(stdin);gets(n.mat);
@@ -19,12 +19,8 @@ note saisie_note(liste_note l)
     {
         printf("saisir Code matiere: ");fflush(stdin);gets(n.code_mat);
     }while(recherche_mat(l2,n.code_mat)==NULL);
-    */
-
-        printf("saisir CIN: ");fflush(stdin);gets(n.mat);
 
 
-        printf("saisir Code matiere: ");fflush(stdin);gets(n.code_mat);
     do
     {
         printf("Saisir le NOTE:");fflush(stdin);scanf("%f",&n.note);

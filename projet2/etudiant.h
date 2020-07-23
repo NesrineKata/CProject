@@ -20,7 +20,7 @@ etudiant saisie_etudiant(liste_etud l)
     do
     {
         printf("saisir cin: ");fflush(stdin);gets(e.cin);
-    }while(!(verif_cin(e.cin)&&recherche_etud(l,e.cin)==NULL));
+    }while(recherche_etud(l,e.cin));
     do
     {
         printf("saisir nom: ");fflush(stdin);gets(e.nom);
@@ -159,66 +159,6 @@ liste_etud suppression_etudiant_donne(liste_etud l,char mat[])
             printf("etudiant n'existe pas!");
     return l;
 }
-void affiche_etudiant(liste_etud l, char mat[])
-{
-    liste_etud p=l;
-    int j=1;
-    while(strcmp(p->info1.cin,mat)!=0&&p)
-        p=p->suiv1;
-
-    if(p!=NULL)
-    {/*
-        gotoxy(1,7+j);printf("|%s",p->info1.cin); Sleep(1000);
-        gotoxy(12,7+j);printf("|%s",p->info1.nom); Sleep(1000);
-        gotoxy(43,7+j);printf("|%s",p->info1.prenom); Sleep(1000);
-        gotoxy(74,7+j);printf("|%d/%d/%d",p->info1.dn.j,p->info1.dn.m,p->info1.dn.a); Sleep(1000);
-        gotoxy(86,7+j);printf("|%.1f",p->info1.section); Sleep(1000);
-        gotoxy(107,7+j);printf("|%d",p->info1.etape); Sleep(1000);
-        gotoxy(110,7+j);printf("|"); Sleep(1000);
-        j++;
-        Sleep(1000);
-       */printf("CIN:%s",p->info1.cin);
-        printf("\nNOM:%s",p->info1.nom);
-        printf("\nPRENOM:%s",p->info1.prenom);
-        printf("\nDATE DE NAISSSANCE:%d/%d/%d",p->info1.dn.j,p->info1.dn.m,p->info1.dn.a);
-        printf("\nSECTION:%s",p->info1.section);
-        printf("\nETAPE:%d",p->info1.etape);
-    }
-    else
-        printf("ETUDIANT N'EXISTE PAS");
-}
-void affiche_liste_etudiant(liste_etud l)
-{
-    int i=1;
-    if(l==NULL)
-        printf("LISTE VIDE\n");
-    else
-    {
-    /*printf("----------------------------------------------------------------------------------------------------------");
-    gotoxy(1,6);printf("|   CIN ");
-    gotoxy(11,6);printf("|");
-    gotoxy(12,6);printf("   Nom");
-    gotoxy(42,6);printf("|");
-    gotoxy(43,6);printf("   Prenom");
-    gotoxy(73,6);printf("|");
-    gotoxy(74,6);printf("  Date de naissance");
-    gotoxy(85,6);printf("|");
-    gotoxy(86,6);printf("SECTION");
-    gotoxy(106,6);printf("|");
-    gotoxy(107,6);printf("ETAPE");
-    gotoxy(110,6);printf("|");
-    printf("\n");
-    printf("|------------------|--------------------|--------------------|--------------------|---------------|----------|");
-      */  while(l)
-        {
-            affiche_etudiant(l,l->info1.cin);
-            l=l->suiv1;
-            i++;
-        }
-    //printf("\n");
-    //printf("--------------------------------------------------------------------------------------------------------------");
-    }
-}
 liste_etud CREATION(liste_etud l)
 {
     int pos,t;
@@ -248,150 +188,36 @@ liste_etud CREATION(liste_etud l)
     }while(rep=='O');
     return l;
 }
-liste_etud supp_etud_sec_etape(liste_etud l,char sect,int nv)
+liste_etud supp_etud_sec_etape(liste_etud l,char sect[],int nv)
 {
-    liste_etud p=l,pos=1;
+    liste_etud p=l,q;
+    int pos=1;
     while(p)
     {
         if(strcmp(p->info1.section,sect)==0&&p->info1.etape==nv)
         {
-            if(pos==1)
-                l=supprimmer_tete_etudiant(l);
-            else
-            {
-                l=suppression_pos_etudiant(l,pos);
-                pos--;
-            }
+                if(p==l)
+                {
+                    l=l->suiv1;
+                    free(p);
+                    p=l;
+                }
+                else
+                {
+                    q=p;
+                    p=p->suiv1;
+                    free(q);
+                }
         }
         else
-        pos++;
         p=p->suiv1;
     }
     return l;
 }
-void recherche_etud_mat(liste_etud l)
-{
-    char mat[9];
-    int  cp=0;
-    printf("\nSAISIR NUMERO DE CIN:");fflush(stdin);gets(mat);
-    if(recherche_etud(l,mat))
-        affiche_etudiant(l,mat);
-    else
-        printf("\nETUDIANT N'EXISTE PAS\n");
-}
-void  recherche_section(liste_etud l)
-{
-    liste_etud p=l;
-    int cp=0;
-    char sect[20];
-    printf("\n SAISIR SECTION:");fflush(stdin);gets(sect);
-    while(p)
-    {
-        if(strcmp(p->info1.section,sect)==0)
-        {
-            affiche_etudiant(l,p->info1.cin);
-            cp=1;
-        }
-        p=p->suiv1;
-    }
-    if(cp==0)
-        printf("Aucun etudiant dans le section: %s\n",sect);
-}
-void  recherche_etape(liste_etud l)
-{
-    liste_etud p=l;
-    int cp=0,nv;
-    printf("\n SAISIR ETAPE:");fflush(stdin);scanf("%d",&nv);
-    while(p)
-    {
-        if(p->info1.etape==nv)
-        {
-            affiche_etudiant(l,p->info1.cin);
-            cp=1;
-        }
-        p=p->suiv1;
-    }
-    if(cp==0)
-        printf("Aucun etudiant dans l'etape : %d\n",nv);
-}
-void  recherche_etape_section(liste_etud l)
-{
-    liste_etud p=l;
-    int cp=0,nv;
-    char sect[20];
-    printf("\n SAISIR SECTION:");fflush(stdin);gets(sect);
-    printf("\n SAISIR ETAPE:");fflush(stdin);scanf("%d",&nv);
-    while(p)
-    {
-        if(strcmp(p->info1.section,sect)==0&&p->info1.etape==nv)
-        {
-            affiche_etudiant(l,p->info1.cin);
-            cp=1;
-        }
-        p=p->suiv1;
-    }
-    if(cp==0)
-              printf("Aucun etudiant dans la section :%s de l'etape : %d\n",sect,nv);
 
-}
-liste_etud ajout_tete_etudiant(liste_etud l)
-{
-    etudiant e;
-    printf("\t\tSAISIR UN ETUDIANT EN TETE DE LA LISTE\n");
-    e=saisie_etudiant(l);
-    l=insere_tete(l,e);
-    return l;
-}
-liste_etud ajout_queue_etudiant(liste_etud l)
-{
-    etudiant e;
-    printf("\t\tSAISIR UN ETUDIANT EN  QUEUE DE LA LISTE\n");
-    e=saisie_etudiant(l);
-    l=insere_queue(l,e);
-    return l;
-}
-liste_etud ajout_pos_etudiant(liste_etud l)
-{
-    etudiant e;
-    int pos;
-    printf("\t\tSAISIR UN ETUDIANT DANS UNE POSTION DE LA LISTE\n");
-    do{printf("\n SAISIR LA POSITION:");fflush(stdin);scanf("%d",&pos);}while(pos<=1||pos>taille_liste(l)+1);
-    e=saisie_etudiant(l);
-    l=insere_pos(l,e,pos);
-    return l;
-}
-liste_etud sup_pos(liste_etud l)
-{
-    int pos;
-    printf("\t\tSUPPRISSION UN ETUDIANT D'UNE POSTION DE LA LISTE\n");
-    if(taille_liste(l)==1)
-        printf("impossible de supprimer car la position doit etre ente 2 et taille de la liste +1");
-    else
-    {
-        do{printf("\n SAISIR LA POSITION:");fflush(stdin);scanf("%d",&pos);}while(pos>taille_liste(l)+1||pos<=1);
-        l=suppression_pos_etudiant(l,pos);
-    }
-    return l;
-}
-liste_etud sup_etud_donne(liste_etud l)
-{
-    char mat[9];
-    printf("\t\tSUPPRISSION UN ETUDIANT DE LA LISTE\n");
-    printf("\n SAISIR CIN:");fflush(stdin);scanf("%s",&mat);
-    l=suppression_etudiant_donne(l,mat);
-    return l;
-}
-liste_etud sup_etud_sect_etape_donne(liste_etud l)
-{
-    char sect[20];
-    int nv;
-    printf("\t\tSUPPRISSION DES ETUDIANT  D'UNE SECTION ET ETAPE DONNE DE LA LISTE\n");
-    printf("\n SAISIR SECTION:");fflush(stdin);scanf("%s",&sect);
-    printf("\n SAISIR ETAPE:");fflush(stdin);scanf("%d",&nv);
-    l=supp_etud_sec_etape(l,sect,nv);
-    return l;
-}
-void tri_liste_etud(liste_etud l)
+
+
+liste_etud tri_liste_etud(liste_etud l)
 {
     liste_etud p=l,q;
     etudiant aux;
@@ -410,12 +236,212 @@ void tri_liste_etud(liste_etud l)
         }
         p=p->suiv1;
     }
+    return l;
 
 }
+liste_etud tri2(liste_etud l)
+{
+    int ok=1;
+    liste_etud p,q,prec;
+    while(ok)
+    {
+        ok=0;
+        p=l;
+        prec=NULL;
+        q=p->suiv1;
+        while(q)
+        {
+            if(strcmp(p->info1.cin,q->info1.cin)>0)
+            {
+                if(prec==NULL)
+                {
+                    p->suiv1=q->suiv1;
+                    q->suiv1=p;
+                    l=q;
+                    prec=q;
+                    q=p->suiv1;
+                }
+                else
+                {
+                    p->suiv1=q->suiv1;
+                    prec->suiv1=q;
+                    q->suiv1=p;
+                    prec=q;
+                    q=p->suiv1;
+                }
+                ok=1;
+
+            }
+            else
+            {
+                prec=p;
+                p=p->suiv1;
+                q=q->suiv1;
+            }
+        }
+    }while(ok);
+    return l;
+
+}
+void affiche(liste_etud l)
+{
+    if(l==NULL)
+        printf("LISTE VIDE");
+    else
+        while(l)
+        {
+printf("%s\t%s\t%s\t%d/%d/%d\t%s\t%d\n",l->info1.cin,l->info1.nom,l->info1.prenom,l->info1.dn.j,l->info1.dn.m,l->info1.dn.a,l->info1.section,l->info1.etape);
+ l=l->suiv1;
+        }
+}
+/*
 void tri1(liste_etud l)
 {
     tri_liste_etud(l);
     printf("\nCONTENU DE LA LISTE APRES  TRI1:\n");
     affiche_liste_etudiant(l);
+    printf("\n");
+}*/
+int nb_mat_section_nv(char sec[],int nv)
+{
+    liste_mat p=LM;
+    int nb=0;
+    while(p)
+    {
+        if(strcmp(p->info2.section,sec)==0&&p->info2.niveau==nv)
+            nb++;
+        p=p->suiv2;
+
+    }
+    //printf("Cette section a %d note ",nb);
+    return nb;
+}
+
+int nb_etud_mat(char mat[])
+{
+    liste_note p=LN;
+    int nb=0;
+    while(p)
+    {
+        if(strcmp(p->info3.mat,mat)==0)
+            nb++;
+        p=p->suiv3;
+    }
+     //printf("L etudiant a %d note",nb/2);
+    return nb/2;
+
+}
+float moyenne_etudiant(liste_mat l,char cinc[])
+{
+    liste_note p,pds,pex;
+    float s=0,scoef=0;
+    liste_mat p2=l;
+    liste_etud p1;
+    etudiant info;
+
+        p1=recherche_etud(LE,cinc);
+        info=p1->info1;
+        nv=info.etape;
+
+       while(p2)
+        {
+            if(strcmp(p2->info2.section,info.section)==0&&p2->info2.niveau==nv)
+                if(recherche_cin_mat(LN,cinc,p2->info2.code_mat,"DS")&&recherche_cin_mat(LN,cinc,p2->info2.code_mat,"EX"))
+                {
+                    pds=recherche_cin_mat(LN,cinc,p2->info2.code_mat,"DS");
+                    pex=recherche_cin_mat(LN,cinc,p2->info2.code_mat,"EX");
+                    moy=pds->info3.note*0.3+pex->info3.note*0.7;
+
+
+                    scoef+=p2->info2.coef;
+                    s+=moy*p2->info2.coef;
+             //       printf("moy=%f s=%f scoef= %f\n",moy,s,scoef);
+                }
+                p2=p2->suiv2;
+        }
+               //            printf("Moyenne  generale =%f\n",s/scoef);
+
+    return ((float)s/scoef);
+
+}
+float moy_etab( liste_etud l)
+{
+    liste_etud p=l;
+    int nb=0;
+    float smoy=0;
+    int test=0;
+    while(p)
+    {
+
+        smoy+=moyenne_etudiant(LM,p->info1.cin);
+        nb++;
+
+        p=p->suiv1;
+       // printf(" somme moyenne etudiant =%f nb=%d",smoy,nb);
+    }
+    return smoy/nb;
+}
+int nb_etud_sec_etape(char sec[],int nv)
+{
+    liste_etud p=LE;
+    int nb=0;
+    while(p)
+    {
+        if(strcmp(p->info1.section,sec)==0&&nv==p->info1.etape)
+            if(nb_etud_mat(p->info1.cin)==nb_mat_section_nv(sec,nv)&&nb_mat_section_nv(sec,nv)==0)
+                nb++;
+        p=p->suiv1;
+    }
+    return nb;
+}
+int rang_etud(char cinc[])
+{
+    liste_etud p=LE,q;
+    q=recherche_etud(LE,cinc);
+    int rg=/*nb_etud_sec_etape(q->info1.section,q->info1.etape)*/1;
+    printf("%d",rg);
+    strcpy(sectionc,q->info1.section);
+    nv=q->info1.etape;
+    while(p)
+    {if(strcmp(p->info1.section,sectionc)==0&&p->info1.etape==nv)
+        if(moyenne_etudiant(LM,p->info1.cin)>=moyenne_etudiant(LM,cinc))
+            rg++;
+        p=p->suiv1;
+    }
+    return rg;
+}
+void matiere_manque(char cinc[],wchar_t *ch,char sec[],int nv)
+{
+    liste_mat p=LM;
+    char es[2]="  ";
+   // wchar_t ch[1024] = L"";
+    strcat(ch,"Les matieres manquantes: ");
+    while(p)
+    {
+        if(strcmp(p->info2.section,sec)==0&&p->info2.niveau==nv)
+        if(recherche_cin_mat(LN,cinc,p->info2.code_mat,"DS")==NULL||recherche_cin_mat(LN,cinc,p->info2.code_mat,"EX")==NULL)
+        {
+            strcat(ch,p->info2.nom_mat);
+            strcat(ch,L" |||| ");
+             printf("%s",ch);
+        }
+         p=p->suiv2;
+    }
+    return ch;
+}
+liste_etud  premier_max(liste_etud LE)
+{
+    liste_etud  p=LE;
+    etudiant info;
+    while(p)
+    {
+       strcpy(sectionc,info.section);
+       nv=info.etape;
+       strcpy(cinc,p->info1.cin);
+       if(nb_etud_mat(cinc)==nb_mat_section_nv(sectionc,nv)&&nb_mat_section_nv(sectionc,nv)!=0)
+            return p;
+        p=p->suiv1;
+     }
+    return p;
 }
 #endif // FONCTION_H_INCLUDED

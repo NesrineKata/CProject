@@ -10,7 +10,7 @@ matiere saisie_matiere(liste_mat l)
     do
     {
         printf("saisir code matiere: ");fflush(stdin);gets(m.code_mat);
-    }while(verif_code(m.code_mat)==0||recherche_code_m(l,m.code_mat));
+    }while(recherche_code_m(l,m.code_mat));
     do
     {
         printf("saisir nom matiere: ");fflush(stdin);gets(m.nom_mat);
@@ -29,6 +29,7 @@ matiere saisie_matiere(liste_mat l)
     }while(m.coef<=0);
     return m;
 }
+
 int taille_liste_mat(liste_mat l)
 {
     int n=0;
@@ -255,7 +256,7 @@ liste_mat sup_mat_donne(liste_mat l)
 
 void modifier_nom(liste_mat l)
 {
-    char nom[30];
+    char nom[50];
     char code_m[4];
     do
     {
