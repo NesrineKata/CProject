@@ -1,0 +1,186 @@
+|22222222|amen allah abderzak|ali|1/1/1981|LA INFO|12|
+|11111111|tbini abderzak|ali|1/1/1981|LA INFO|3|
+|22222222|haykel abderzak|ali|1/1/1981|LA INFO|1|
+|11111111|12345678901234567890|ali|1/1/1981|LF MATH|3|
+|22222222|amen allah abderzak|ali|1/1/1981|LF MATH|1|
+|11111111|tbini abderzak|ali|1/1/1981|LA INFO|1|
+|22222222|haykel abderzak|ali|1/1/1981|LA STIC|2|
+|11111111|12345678901234567890|ali|1/1/1981|LA INFO|1|
+|22222222|amen allah abderzak|ali|1/1/1981|LA INFO|1|
+|11111111|tbini abderzak|ali|1/1/1981|LA INFO|1|
+|22222222|haykel abderzak|ali|1/1/1981|LA INFO|1|
+|11111111|12345678901234567890|ali|1/1/1981|LA INFO|1|
+|22222222|amen allah abderzak|ali|1/1/1981|LA INFO|1|
+|11111111|tbini abderzak|ali|1/1/1981|LA INFO|1|
+|22222222|haykel abderzak|ali|1/1/1981|LA STIC|2|
+|11111111|12345678901234567890|ali|1/1/1981|LF MATH|1|
+|22222222|amen allah abderzak|ali|1/1/1981|LA INFO|3|
+|11111111|tbini abderzak|ali|1/1/1981|LA INFO|1|
+|22222222|haykel abderzak|ali|1/1/1981|LA INFO|1|
+|11111111|12345678901234567890|ali|1/1/1981|LA INFO|1|
+|22222222|amen allah abderzak|ali|1/1/1981|LA INFO|2|
+|11111111|tbini abderzak|ali|1/1/1981|LA INFO|1|
+|11111111|haykel abderzak|ali|1/1/1981|LA INFO|1|
+|33333333|abouallah ali|salme|1/12/1995|LF STIC|3|
+
+|22222222|amen allah abderzak|ali|1/1/1981|LA INFO|1|
+|11111111|tbini abderzak|ali|1/1/1981|LA INFO|3|
+|22222222|haykel abderzak|ali|1/1/1981|LA INFO|1|
+|11111111|12345678901234567890|ali|1/1/1981|LF MATH|3|
+|22222222|amen allah abderzak|ali|1/1/1981|LF MATH|1|
+|11111111|tbini abderzak|ali|1/1/1981|LA INFO|1|
+|22222222|haykel abderzak|ali|1/1/1981|LA STIC|2|
+|11111111|12345678901234567890|ali|1/1/1981|LA INFO|1|
+|22222222|amen allah abderzak|ali|1/1/1981|LA INFO|1|
+|11111111|tbini abderzak|ali|1/1/1981|LA INFO|1|
+|22222222|haykel abderzak|ali|1/1/1981|LA INFO|1|
+|11111111|12345678901234567890|ali|1/1/1981|LA INFO|1|
+|22222222|amen allah abderzak|ali|1/1/1981|LA INFO|1|
+|11111111|tbini abderzak|ali|1/1/1981|LA INFO|1|
+|22222222|haykel abderzak|ali|1/1/1981|LA STIC|2|
+|11111111|12345678901234567890|ali|1/1/1981|LF MATH|1|
+|22222222|amen allah abderzak|ali|1/1/1981|LA INFO|3|
+|11111111|tbini abderzak|ali|1/1/1981|LA INFO|1|
+|22222222|haykel abderzak|ali|1/1/1981|LA INFO|1|
+|11111111|12345678901234567890|ali|1/1/1981|LA INFO|1|
+|22222222|amen allah abderzak|ali|1/1/1981|LA INFO|2|
+|11111111|tbini abderzak|ali|1/1/1981|LA INFO|1|
+|11111111|haykel abderzak|ali|1/1/1981|LA INFO|1|
+|33333333|abouallah ali|salme|1/12/1995|LF STIC|3|
+
+
+
+|751|Atelier Base des donnees Avancees|LA INFO|1.00|2|
+|757|Metho.Conceptions Systeme.information|LA INFO|2.00|2|
+|731|Francais|LA INFO|1.00|2|
+|733|Culture de l'Entreprise|LA INFO|1.00|2|
+|732|Anglais|LA INFO|1.00|2|
+|755|Administration Systeme|LA INFO|1.00|2|
+|729|Reseaux d'Entreprise|LA INFO|1.00|2|
+|752|Env.de Develeppement de base de donnees|LA INFO|1.00|2|
+|725|Gestion de Base  des base de donnees|LA INFO|1.00|2|
+|756|Atelier De Genie Logiciel|LA INFO|1.00|2|
+|748|Techniques d'Idexation et recherche Multimedia|LA INFO|1.00|2|
+|746|Programmation Web|LA INFO|1.00|2|
+|745|Programmation O.O|LA INFO|1.00|2|
+|704|Structure de Donnes Avancees |LA INFO|2.00|2|
+|705|Atelier Base de Donnees|LA INFO|0.00|2|
+|713|francais|LA INFO|1.00|2|
+|715|Culture de l'Entreprise|LA INFO|1.00|2|
+|714|Anglais|LA INFO|1.00|2|
+|741|Architecture de Reseaux|LA INFO|1.00|2|
+|711|Systeme d'exploitation|LA INFO|1.00|2|
+|707|Base des Donnees|LA INFO|1.00|2|
+|701|Methodologie de Conception  O.O|LA INFO|1.00|2|
+|726|Genie Logiciel|LA INFO|1.00|2|
+|723|Programmation O.O|LA INFO|1.00|2|
+|719|Probabilities et Statistiques|LA INFO|2.00|2|
+|702|Logique Mathematique|LA INFO|2.00|2|
+|561|Langage a Balise |LA INFO|1.00|1|
+|124|Atelier Systemes d'Exploitation|LA INFO|1.00|1|
+|116|Programmation C|LA INFO|1.00|1|
+|123|Droits de l'Homme|LA INFO|1.00|1|
+|565|C2I|LA INFO|1.00|1|
+|552|Anglais|LA INFO|1.00|1|
+|557|Transmission des Donnees|LA INFO|1.00|1|
+|113|Architecture des Ordinateurs|LA INFO|1.00|1|
+|524|Systeme d'Exploitation|LA INFO|1.00|1|
+|555|Atelier de Programmation|LA INFO|1.00|1|
+|111|Algo. et Structures  de donnees|LA INFO|2.00|1|
+|559|analyse 2|LA INFO|1.00|1|
+|108|Algebre 2|LA INFO|1.00|1|
+|505|Programmation C|LA INFO|2.00|1|
+|499|Atelier d'Electronique|LA INFO|1.00|1|
+|495|Droit de l'Homme 1|LA INFO|1.00|1|
+|497|C2I|LA INFO|1.00|1|
+|514|Anglais |LA INFO|1.00|1|
+|507|Atelier Systeme d'Exploitation|LA INFO|1.00|1|
+|504|Algo. et Structures |LA INFO|2.00|1|
+|498|Elecricite et Electronique|LA INFO|2.00|1|
+|508|Systeme logiques|LA INFO|1.00|1|
+|500|atelier de programmation|LA INFO|1.00|1|
+|502|analyse 1|LA INFO|1.00|1|
+|501|algebre 1|LA INFO|1.00|1|
+|645|droit de l'Homme 2|LF STIC|2.00|1|
+|646|C2I 2|LF STIC|2.00|1|
+|659|Anglais 2|LF STIC|2.00|1|
+|642|Atelier d'E.E.A 2 |LF STIC|2.00|1|
+|632|Logique Sequentielle|LF STIC|3.00|1|
+|624|Electronique Analogique|LF STIC|3.00|1|
+|640|Atelier d'informatique 2|LF STIC|2.00|1|
+|628|Base de Donnees |LF STIC|2.00|1|
+|627|Systeme d'exploitation|LF STIC|2.00|1|
+|641|Atelier de Pysique 2|LF STIC|2.00|1|
+|128|Mecanique Generale|LF STIC|3.00|1|
+|630|Magnetostatique|LF STIC|3.00|1|
+|684|Analyse 2|LF STIC|4.00|1|
+|139|Algebre 2|LF STIC|4.00|1|
+|638|Droits de l'Homme |LF STIC|2.00|1|
+|636|C2I 1|LF STIC|2.00|1|
+|616|Anglais 1|LF STIC|2.00|1|
+|612|Atelier de'E.E.A 1|LF STIC|2.00|1|
+|611|systheme logiques Combinatoire|LF STIC|3.00|1|
+|610|Circuit Electriques|LF STIC|3.00|1|
+|604|Atelier d'informatique 1|LF STIC|2.00|1|
+|603|Architecture des ordinateurs |LF STIC|1.00|1|
+|602|Algorithme et Programmation |LF STIC|3.00|1|
+|608|Atelier De Pysique 1|LF STIC|2.00|1|
+|639|Introduction a la thermodynamique|LF STIC|3.00|1|
+|606|electrostatique|LF STIC|3.00|1|
+|601|analyse 1|LF STIC|4.00|1|
+|618|Algebre 1|LF STIC|4.00|1|
+
+|751|Atelier Base des donnees Avancees|LA INFO|1.00|2|
+|757|Metho.Conceptions Systeme.information|LA INFO|2.00|2|
+|731|Francais|LA INFO|1.00|2|
+|733|Culture de l'Entreprise|LA INFO|1.00|2|
+|732|Anglais|LA INFO|1.00|2|
+|755|Administration Systeme|LA INFO|1.00|2|
+|729|Reseaux d'Entreprise|LA INFO|1.00|2|
+|752|Env.de Develeppement de base de donnees|LA INFO|1.00|2|
+|725|Gestion de Base  des base de donnees|LA INFO|1.00|2|
+|756|Atelier De Genie Logiciel|LA INFO|1.00|2|
+|748|Techniques d'Idexation et recherche Multimedia|LA INFO|1.00|2|
+|746|Programmation Web|LA INFO|1.00|2|
+|745|Programmation O.O|LA INFO|1.00|2|
+|704|Structure de Donnes Avancees |LA INFO|2.00|2|
+|705|Atelier Base de Donnees|LA INFO|0.00|2|
+|713|francais|LA INFO|1.00|2|
+|715|Culture de l'Entreprise|LA INFO|1.00|2|
+|714|Anglais|LA INFO|1.00|2|
+|741|Architecture de Reseaux|LA INFO|1.00|2|
+|711|Systeme d'exploitation|LA INFO|1.00|2|
+|707|Base des Donnees|LA INFO|1.00|2|
+|701|Methodologie de Conception  O.O|LA INFO|1.00|2|
+|726|Genie Logiciel|LA INFO|1.00|2|
+|723|Programmation O.O|LA INFO|1.00|2|
+|719|Probabilities et Statistiques|LA INFO|2.00|2|
+|702|Logique Mathematique|LA INFO|2.00|2|
+|561|Langage a Balise |LA INFO|1.00|1|
+|124|Atelier Systemes d'Exploitation|LA INFO|1.00|1|
+|116|Programmation C|LA INFO|1.00|1|
+|123|Droits de l'Homme|LA INFO|1.00|1|
+|565|C2I|LA INFO|1.00|1|
+|552|Anglais|LA INFO|1.00|1|
+|557|Transmission des Donnees|LA INFO|1.00|1|
+|113|Architecture des Ordinateurs|LA INFO|1.00|1|
+|524|Systeme d'Exploitation|LA INFO|1.00|1|
+|555|Atelier de Programmation|LA INFO|1.00|1|
+|111|Algo. et Structures  de donnees|LA INFO|2.00|1|
+|559|analyse 2|LA INFO|1.00|1|
+|108|Algebre 2|LA INFO|1.00|1|
+|505|Programmation C|LA INFO|2.00|1|
+|499|Atelier d'Electronique|LA INFO|1.00|1|
+|495|Droit de l'Homme 1|LA INFO|1.00|1|
+|497|C2I|LA INFO|1.00|1|
+|514|Anglais |LA INFO|1.00|1|
+|507|Atelier Systeme d'Exploitation|LA INFO|1.00|1|
+|504|Algo. et Structures |LA INFO|2.00|1|
+|498|Elecricite et Electronique|LA INFO|2.00|1|
+|508|Systeme logiques|LA INFO|1.00|1|
+|500|atelier de programmation|LA INFO|1.00|1|
+|502|analyse 1|LA INFO|1.00|1|
+|501|algebre 1|LA INFO|1.00|1|
+
+
+

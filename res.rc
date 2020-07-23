@@ -1,0 +1,26 @@
+MyPicture BITMAP "image.bmp"
+MyPicture0 BITMAP "acceuil.bmp"
+ajout_etudiant BITMAP "ajout etudiant.bmp"
+creation_etudiant BITMAP "creation etudiant.bmp"
+affichage_etudiants BITMAP "affichage.bmp"
+affichage_etudiants_mat BITMAP "rech_et_mat2.bmp"
+supprimer_etudiant BITMAP "sup etudiant.bmp"
+
+/***********************************************************************************************************************************/
+creation_matiere BITMAP "creation matiere.bmp"
+supprimer_matiere BITMAP "sup etudiant.bmp"
+affiche_liste_note BITMAP "affiche_liste_note.bmp"
+nv_coef BITMAP "nv_coef.bmp"
+nv_nom BITMAP "nv_nom.bmp"
+rech_mat_code BITMAP "rech_mat_code.bmp"
+
+
+/**************************************************************************************************************************************/
+ajout_note BITMAP "ajouter note.bmp"
+supprimer_note BITMAP "supp note.bmp"
+
+
+/**************************************************************************************************************************/
+bulletin BITMAP "bulletin.bmp"
+etud_admis BITMAP "etudiants_admis.bmp"
+etud_redoubles BITMAP "etudiants redoubles.bmp"
